@@ -1,0 +1,16 @@
+import java.util.*;
+class number
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter the value of N");
+        int N,i,f=1;
+        N=in.nextInt();
+        for(i=1;i<=N;i++)
+        {
+            f=f*i;
+        }
+        System.out.println("the factorial of "+N+" is "+f);
+    }
+}
