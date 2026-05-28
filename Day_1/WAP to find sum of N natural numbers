@@ -1,0 +1,14 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int N,i,sum=0;
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter the the value of N");
+        N=in.nextInt();
+        for(i=0;i<=N;i++)
+        {
+            sum=sum+i;
+        }
+        System.out.println("sum of N natural numbers = "+sum);
+    }
+}
