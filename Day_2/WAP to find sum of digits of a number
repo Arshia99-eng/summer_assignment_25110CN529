@@ -1,0 +1,18 @@
+import java.util.*;
+class numbers
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        int n,sum=0;
+        System.out.println("enter the number");
+        n=in.nextInt();
+        while(n!=0)
+        {
+            int temp=n%10;
+            sum=sum+temp;
+            n=n/10;
+        }
+        System.out.println("the sum of digits of the number are "+sum);
+    }
+}
