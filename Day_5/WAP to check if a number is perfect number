@@ -1,0 +1,24 @@
+import java.util.*;
+class perfect
+{ 
+    public static int divisorsum(int a)
+    {
+        int sum=0;
+        for(int i=1; i<=a;i++)
+        {
+            if(a%i==0&&i!=a)
+            sum=sum+i;
+        }
+        return sum;
+    }
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter the number to check");
+        int n=in.nextInt();
+        if(n==divisorsum(n))
+        System.out.println("yes it is a perfect number");
+        else
+        System.out.println("no it is not a perfect number");
+    }
+}
