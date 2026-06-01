@@ -1,0 +1,37 @@
+import java.util.*;
+class prime
+{
+    public static int largestPrimeFactor(int n) {
+        int maxPrime = -1;
+
+        // Divide out factors of 2
+        while (n % 2 == 0) {
+            maxPrime = 2;
+            n /= 2;
+        }
+
+        // Divide out odd factors
+        for (int i = 3; i <= Math.sqrt(n); i += 2) {
+            while (n % i == 0) {
+                maxPrime = i;
+                n /= i;
+            }
+        }
+
+        // If n is still > 2, then it's prime
+        if (n > 2) {
+            maxPrime = n;
+        }
+
+        return maxPrime;
+    }
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter the number");
+        int n=in.nextInt();
+        int max=largestPrimeFactor(n);
+        System.out.print("largest prime factor is "+max);
+    }
+    
+}
