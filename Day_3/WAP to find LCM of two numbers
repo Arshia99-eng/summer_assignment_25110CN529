@@ -1,0 +1,21 @@
+import java.util.*;
+class GCD
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter first number");
+        int num1=in.nextInt();
+        System.out.println("enter tehe second number");
+        int num2=in.nextInt();
+        int gcd=findgcd(num1,num2);
+        int lcm=(num1*num2)/gcd;
+        System.out.println("the LCM of two numbers "+num1+" and "+num2+" is "+lcm);
+    }
+    public static int findgcd(int a, int b)
+    {
+        if(b==0)
+        return a;
+        return findgcd(b,a%b);
+    }
+}

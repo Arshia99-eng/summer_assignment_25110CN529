@@ -1,0 +1,25 @@
+import java.util.*;
+class armstrong
+{
+    public static void main(String args[])
+    {
+    Scanner in=new Scanner(System.in);
+    System.out.println("enter the number to check");
+    int n=in.nextInt();
+    int m=n;
+    String num=String.valueOf(n);
+    int digit=num.length();
+    double sum=0;
+    while(n!=0)
+    {
+        int temp=n%10;
+        sum=sum + Math.pow(temp,digit);
+        n=n/10;
+    }
+    if(sum==m)
+    System.out.println("yesss !!!!!....its a armstrong number");
+    else
+    System.out.println("nope !!!!.....not a armstrong number");
+   
+}
+}

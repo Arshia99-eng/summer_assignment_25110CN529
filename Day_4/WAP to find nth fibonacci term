@@ -1,0 +1,29 @@
+import java.util.*;
+class fibonacci
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter the term to find");
+        int n=in.nextInt();
+        int first=0;
+        int next=0;
+        int a=0;
+        for(int i=1;i<=n;i++)
+        {
+            if(i==1)
+            {
+            first=0;
+            next=1;
+            }
+            else
+            {
+                a=first;
+                first=next;
+                next=next+a;
+            }
+            if(i==n)
+            System.out.println(first);
+        }
+    }
+}

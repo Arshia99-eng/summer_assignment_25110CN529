@@ -1,0 +1,18 @@
+import java.util.*;
+class numbers
+{
+    public static void main(String args[])
+    {
+        Scanner in=new Scanner(System.in);
+        System.out.println("enter the number");
+        int n=in.nextInt();
+        String rev="";
+        while(n!=0)
+        {
+          int temp=n%10;
+          rev=rev+temp;
+          n=n/10;
+        }
+        System.out.println("the reversed number is "+ rev);
+    }
+}

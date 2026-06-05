@@ -1,0 +1,28 @@
+import java.util.*;
+class armstrong
+{
+    public static void main(String args[])
+    {
+    Scanner in=new Scanner(System.in);
+    System.out.println("enter the lower bound");
+    int lb=in.nextInt();
+    System.out.println("enter the upper bound");
+    int ub=in.nextInt();
+    for(int i=lb;i<=ub;i++)
+    {
+    int m=i;
+    int n=i;
+    String num=String.valueOf(i);
+    int digit=num.length();
+    double sum=0;
+    while(n!=0)
+    {
+        int temp=n%10;
+        sum=sum + Math.pow(temp,digit);
+        n=n/10;
+    }
+    if(sum==m)
+    System.out.println(m);
+    }
+}
+}
